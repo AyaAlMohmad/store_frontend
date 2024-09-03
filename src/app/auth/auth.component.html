@@ -1,0 +1,127 @@
+<div class="container" >
+  <div class="login" *ngIf="logreg">
+
+    <div class="row mt-5">
+      <div class="col-md-5  ">
+        <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+          <h3>{{'Current Client'|translate}}</h3>
+          <div class="form-group mt-2">
+            <label for="">{{'Email(name@domain.com)'|translate}}</label>
+            <input type="text" class="form-control mt-3" formControlName="email">
+          </div>
+          <div class="form-group mt-3">
+            <label for="">{{'password'|translate}}</label>
+            <input type="password" class="form-control mt-3" formControlName="password">
+          </div>
+          <div *ngIf="loginForm.get('password')?.touched && (loginForm.get('password')?.value).length < (8)"
+            style="color: red;">
+            {{'Password length at least 8'|translate}}
+          </div>
+          <!-- <a class="cursor mt-4" (click)="forgetPage=true">{{'Forget your password ?'|translate}}</a> -->
+
+          <div class="text-center mt-3">
+            <button class="btn btn-dark w-50" [disabled]="loginForm.invalid">{{'LOG IN'|translate}}</button>
+
+          </div>
+        </form>
+
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-5  ">
+        <div class="login-panel text-center">
+
+          <h5>{{'New Client'|translate}}</h5>
+          <p>{{"Create your account to track and manage your orders"|translate}} ,{{'find all your personal
+            information'|translate}}
+            ,{{'and your favorite item'|translate}}.</p>
+          <div class="text-center">
+            <button class="btn btn-light btn-outline-dark w-75 text-center" (click)="logreg=false">{{'SIGN
+              UP'|translate}}</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="register" *ngIf="!logreg">
+  <h4 class="title">{{'New Account'|translate}}</h4>
+  <hr class="horezental">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <h3 class="new-costumer">{{'New Client'|translate}} ?</h3>
+        <div class="form-register ">
+          <form [formGroup]="registerForm" (ngSubmit)="registerSubmit()">
+            <label for="">{{'All fields are requiered'|translate}}</label>
+            <div class="form-group mt-4">
+              <label for="">{{'Title'|translate}}</label>
+              <select class="form-control" formControlName="title">
+                <option value="mister">{{'mister'|translate}}</option>
+                <option value="miss">{{'miss'|translate}}</option>
+
+              </select>
+
+            </div>
+            <div class="form-group mt-4">
+              <label for="">{{'Name'|translate}}</label>
+              <input type="text" class="form-control" formControlName="name">
+            </div>
+
+            <div class="form-group mt-4">
+              <label for="">{{'Mobile phone'|translate}}</label>
+              <input type="number" class="form-control" formControlName="phone">
+            </div>
+            <div class="form-group mt-4">
+              <label for="">E-Mail(name@domin.com)</label>
+              <input type="email" class="form-control" formControlName="email">
+            </div>
+            <div class="form-group mt-4">
+              <label for="">{{'Password'|translate}}</label>
+              <input type="password" class="form-control" formControlName="password">
+            </div>
+            <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched"
+              style="color: red;">
+              {{" Password length at least 8"|translate}}
+            </div>
+            <div class="form-group mt-4">
+              <label for="">{{'Confirm Password'|translate}}</label>
+              <input type="password" class="form-control" formControlName="confirmPassword">
+              <div *ngIf="registerForm.get('confirmPassword')?.value !== registerForm.get('password')?.value 
+                && registerForm.get('confirmPassword')?.touched " style="color: red;">
+                {{"Password must match"|translate}}
+              </div>
+
+            </div>
+            <div class="form-check mt-4">
+              <input class="form-check-input" type="checkbox" formControlName="check1">
+              <label class="form-check-label" for="myCheckbox">
+                {{ "by checking this box,iconsent to the processing of my perssonal data"|translate}} {{"by Maison Ciel
+                under the conditions defined by the Term of use "|translate}}{{'and our Privacy Policy which you certify
+                to have read'|translate}}.
+              </label>
+            </div>
+            <div class="form-check mt-4">
+              <input class="form-check-input" type="checkbox" formControlName="check2">
+              <label class="form-check-label" for="myCheckbox">
+                {{"I would like to receive Maison Ciel news and be notified of future events"|translate}}.
+                {{"I agree to receive proposals by email"|translate}}.
+              </label>
+            </div>
+            <div class="button mt-4 text-center">
+              <button class="btn btn-dark w-75" type="submit" [disabled]="registerForm.invalid">REGISTER</button>
+              <button class="btn btn-dark w-75 mt-4" (click)="logreg=true">{{"Back To Login"|translate}}</button>
+
+            </div>
+
+
+          </form>
+        </div>
+
+      </div>
+      <div class="col-md-2"></div>
+
+    </div>
+  </div>
+</div>

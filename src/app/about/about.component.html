@@ -1,0 +1,22 @@
+<div class="container">
+    <!-- <div class="image-maison">
+        <img src="../../assets/logoimage/Maison Ciel Logo-09.png">
+    </div> -->
+    <section class="parent-section" *ngFor="let item of about">
+        
+        <h5 class="title-about mt-5">{{item.translations.title}}</h5>
+     <div class="desc"><p class="short-description" [innerHTML]="item.translations.short_description"></p></div>   
+        <div class="image-description">
+            <img src="https://maisonciel.com.tr/{{item.images}}">
+        </div>
+        <div class="desc">
+            <p class="description" [innerHTML]="item.translations.description"> </p>
+
+        </div>
+           
+       
+    </section>
+</div>
+<div class="foot">
+    <app-footer></app-footer>
+</div>

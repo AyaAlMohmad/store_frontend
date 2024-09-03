@@ -1,0 +1,20 @@
+<div class="container">
+    <!-- <div class="logo-imag-maison">
+        <img src="../../assets/logoimage/Maison Ciel Logo-09.png">
+    </div> -->
+    <div class="section-title-faq">
+        <h4 class="title">
+            {{'FAQ`s'|translate}}
+        </h4>
+    </div>
+<div class="number-list">
+    <ul *ngFor="let que of question">
+        <li class="question-item">{{que.translations.question}}
+            <p class="answer-item">{{que.translations.answer}}</p>
+        </li>
+    </ul>
+    </div>
+</div>
+<div class="foot">
+    <app-footer></app-footer>
+</div>

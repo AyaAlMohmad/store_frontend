@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="title-product-selection">
+        <h5>{{'PRODUCT SELECTIONS'|translate}}</h5>
+    </div>
+</div>
+
+<section class="section-product-view">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let item of orderIndex" >
+            <div class="card mb-4"  routerLink="/product-details/{{item.id}}">
+                <div class="card-img" >
+                    <img src="https://maisonciel.com.tr/{{item.images[0]}}">
+                </div>
+                <div class="card-body">
+                    <div class="card-title text-center mt-6">
+                        <h6>{{item.translation.name}}</h6>
+                    </div>
+                    <div class="card-text mb-4">
+                        <p>{{item.category.name}}</p><br>
+                        <p>{{item.translation.material}}</p>
+                    </div>
+
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<div class="foot">
+    <app-footer></app-footer>
+</div>
+

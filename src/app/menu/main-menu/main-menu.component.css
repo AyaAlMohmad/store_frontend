@@ -1,0 +1,124 @@
+
+
+.drop-down2{
+    padding-bottom: 50px;
+  background-color: #ffffff;
+    font-weight: 400 !important;
+    font-size: 15px;
+  
+  
+
+    
+}
+
+.dropdwon-menu-cntent-section-one{
+    padding: 35px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 9px;
+    z-index: 1;
+    /* font-family: 'Lato', sans-serif!important; */  
+   
+
+}
+
+.dropdwon-menu-cntent-section-one>.item-dropdown{
+    font-weight: 400;
+}
+.dropdwon-menu-cntent-section-one::after{
+    content: "";
+    width: 100%;
+    height: 0.1px;
+    background-color: #000000;
+}
+.dropdwon-menu-cntent-section-two{
+    padding: 15px 15px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* row-gap: 15px; */
+    z-index: 1;
+   
+}
+.dropdwon-menu-cntent-section-two::after{
+    content: " ";
+    width: 100%;
+    /* height: 1px; */
+    background-color: #000000;
+
+}
+.dropdwon-menu-cntent-section-two2{
+    padding: 15px 15px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 9px;
+    z-index: 1;
+    
+}
+.dropdwon-menu-cntent-section-two2::after{
+    content: " ";
+    width: 100%;
+    height: 0.1px;
+    background-color: #000000;
+}
+.dropdwon-menu-cntent-section-three{
+    padding: 15px 15px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 9px;
+    z-index: 1;
+   
+}
+.dropdwon-menu-cntent-section-three>.item-dropdown{
+    font-weight: 400;
+}
+.dropdwon-menu-cntent-section-three::after{
+    content: " ";
+    width: 100%;
+    height: 0.1px ;
+    background-color: #000000;
+}
+.dropdwon-menu-cntent-section-four{
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 9px;
+    z-index: 1;
+}
+.item-dropdown{
+color: #000000;
+position: relative;
+transition: 0.3s; 
+font-weight: 600;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.item-dropdown::after{
+    content: " ";
+    width: 0px;
+    height: 1px;
+    background-color: #000000;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    
+}
+.dropdwon-menu-cntent-section-four>.item-dropdown{
+    font-weight: 400;
+}
+.item-dropdown:hover::after{
+    width: 100%;
+}
+.sub-menu-products{
+    position: absolute;
+    top: 0;
+    left: 250px;
+    z-index: 8888888888888888888;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+}

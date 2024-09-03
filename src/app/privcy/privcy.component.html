@@ -1,0 +1,24 @@
+<div class="container">
+
+    <!-- <div class="image-maison">
+        <img src="../../assets/logoimage/Maison Ciel Logo-07.png">
+    </div> -->
+
+    <h5 class="title">
+
+        {{policy[0].translations.title}}
+    </h5>
+    <p>{{policy[0].translations.description}}</p>
+    
+    <div class="section-title-desc" *ngFor="let item of policyData">
+        <h6 class="title-arti">
+            {{item.translations.title}}
+        </h6>
+        <p class="descri">
+            {{item.translations.description}}
+        </p>
+    </div>
+</div>
+<div class="foot">
+    <app-footer></app-footer>
+</div>

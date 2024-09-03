@@ -1,0 +1,150 @@
+
+<nav class="navbar1" >
+    <div class="navbar" >
+        <div class="menu-search-section">
+            <ul class="list-menu-icon-bar" >
+
+                <li class="img-list-icon ">
+                    <img class="cursor" src="../../assets/icons/Menu_icon_2_icon-icons.com_71856.png"
+                        (click)="openMenu=true " *ngIf="!openMenu" >
+                    <button type="button" class="btn-close " aria-label="Close" *ngIf="openMenu"
+                        (click)="openMenu=false &&valueshwoSubMenu=false"  ></button>
+                    <!-- (click)="value=false" appClickOutSide (appClickOutSide)="clickedoutSide()" -->
+                    <div class="allList">
+                        <div class="dropdown1"  *ngIf="openMenu" (window:mouseup)="autoCloseForDropdownCars($event)" >
+                            <app-main-menu ></app-main-menu>
+
+                        </div> 
+                        <div class="sub-products-list" *ngIf="valueshwoSubMenu && openMenu">
+                            <app-side-product></app-side-product>
+                        </div>
+                    </div>
+
+                </li>
+
+                <li>
+                    <div class="cursor" (click)="openMenu=true " *ngIf="!openMenu">
+                        {{'MENU' | translate}}
+                    </div>
+
+                    <div class="cursor" *ngIf="openMenu" (click)="openMenu=false && valueshwoSubMenu = false">{{'CLOSE'
+                        |translate}}</div>
+                </li>
+
+            </ul>
+
+            <ul class="list-search-icon-bar">
+                <li class="img-search-list-icon">
+                    <img src="../../assets/icons/searchmagnifierinterfacesymbol1_79893.png">
+                </li>
+                <li (click)="showSearchBox= !showSearchBox" *ngIf="!showSearchBox">{{'SEARCH'| translate}}</li>
+                <input *ngIf="showSearchBox" type="text" placeholder="{{'What are you looking for'|translate}}?"
+                    (keyup)="searchProducts($event)" (blur)="hideSearch()">
+                <!-- <ul class="suggested-result"  *ngIf="searchResult">
+                    <li *ngFor="let item of searchResult" >
+                        <a >{{item.translation.name}}</a>
+                        
+                    </li>
+                   
+                </ul> -->
+            </ul>
+
+        </div>
+        <div class="logo-section">
+            <img src="../../assets/logoimage/Maison Ciel Logo-12.png" routerLink="/home">
+        </div>
+        <div class="product-project-section">
+            <ul class="list-product-project">
+                <a (click)="toggele()">
+                    <li class="item-list-product-project cursor">{{'PRODUCTS' |translate}}</li>
+                </a>
+                <a>
+                    <li class="item-list-product-project cursor" routerLink="/projects">{{'PROJECTS' |translate}}</li>
+                </a>
+              
+            </ul>
+
+            <ul class="list-register cursor" >
+                <li class="register-item" *ngIf="!regester" (click)="logOut()"> {{'LOGOUT' |translate}}</li> 
+
+
+                <li class="register-item" *ngIf="regester" routerLink="auth"> {{'REGISTER' |translate}}</li>
+
+
+
+
+
+            </ul>
+
+            <div class="selectLanguage">
+                <select style="background-image: url('../../assets/icons/-language_89801.png');background-size: 50%; border: none;
+              
+               " class="form-select form-select-sm " (change)=changeLang($event)>
+                   
+                    <option  value="en"  [selected]="lang==='en'" >
+                      English
+                    </option>
+                  
+                    <!-- <option value="fr" [selected]="lang==='fr'">France</option> -->
+
+                </select>
+                <!-- <img class="language-icon" src="../../assets/icons/-language_89801.png"> -->
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div #myDiv class="poroducts-menu w-100" *ngIf="isMenuProductOpen" (window:mouseup)="autoCloseHeaderProducts($event)">
+
+        <app-header-product></app-header-product>
+    </div>
+
+
+
+    <!-- MOBILE DESIGN -->
+    <div class="nav-mobile">
+        <div class="menu-search">
+            <img class="menu" src="../../assets/icons/Menu_icon_2_icon-icons.com_71856.png" alt=""
+                (click)="togglemobile()">
+            <img class="search" routerLink="/search" src="../../assets/icons/searchmagnifierinterfacesymbol1_79893.png"
+                alt="">
+                
+
+
+        </div>
+        <div class="allList1">
+            <div class="dropdown11" *ngIf="openMenuMobile" > 
+
+                <app-main-menu></app-main-menu>
+
+            </div>
+            <div class="sub-products-list1" *ngIf="valueshwoSubMenu && openMenuMobile">
+                <app-side-product></app-side-product>
+            </div>
+        </div>
+        <div class="logo-m">
+            <img src="../../assets/logoimage/Maison Ciel Logo-12.png" alt="" routerLink="/home">
+
+        </div>
+        <div class="right">
+            <div class="profile">
+                <img src="../../assets\/logoimage/4092564-about-mobile-ui-profile-ui-user-website_114033.png"
+                (click)="GoProfile()"
+                alt="">
+            </div>
+            <div class="select-lang">
+
+                <select style="background-image: url('../../assets/icons/-language_89801.png');background-repeat:no-repeat;background-size:50%; border: none;" class="form-select selected " (change)=changeLang($event)>
+    
+                    <option value="en" [selected]="lang==='en'">English</option>
+                    <!-- <option value="fr" [selected]="lang==='fr'">France</option> -->
+    
+                </select>
+                <!-- <img class="language-icon" src="../../assets/icons/-language_89801.png"> -->
+            </div>
+        </div>
+       
+    </div>
+</nav>

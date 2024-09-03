@@ -1,0 +1,130 @@
+<footer class="footer">
+    <div class="container">
+        <!-- <div class="row"> -->
+        <!-- <div class="col-md-4">
+                <p class="labal-recive-email">
+                    Receive by email the latest news and offers from MaisonCiel
+                </p>
+            </div>
+            <div class="col-md-5 pt-4">
+                <div class="input-recive-email ">
+                    <input type="text" placeholder="Your email Address (name@domain.com)">
+                    <div class="subscribe-button">Subscribe</div>
+                </div>
+            </div> -->
+
+
+        <!-- </div> -->
+        <!-- <p class="nagham">NAGHAM1997</p> -->
+        <div class="row">
+            <div class="col-md-5" class="follow-us-footer">
+                <!-- <h6 class="title-follow-us ms-5">
+            {{"Follow us on"|translate}}:
+        </h6> -->
+                <div class="icon-footer ms-5 mt-3">
+                    {{"Follow us on"|translate}}
+                    <!-- <a href="{{item.link}}" target="_blank" *ngFor="let item of social">
+                        <img src="https://maisonciel.com.tr/{{item.images}}"></a> -->
+                    <a href="{{item.link}}" target="_blank" *ngFor="let item of social">
+                        <div class="image-footer">
+                            <img src="https://maisonciel.com.tr/{{item.images}}">
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <ul class="footer-list">
+                    <p class="footer-item-title">{{'INVESTORS'|translate}}</p>
+                    <a routerLink="/investors">
+                        <li class="item-ul-footer">{{"ACCESS DEDICATED SPACE"|translate}}</li>
+                    </a>
+
+                </ul>
+                <ul class="footer-list">
+                    <p class="footer-item-title">{{"CORPORATE"|translate}}</p>
+                    <a routerLink="/careers">
+                        <li class="item-ul-footer">{{'CAREERS'|translate}}</li>
+                    </a>
+                    <a routerLink="/contract">
+                        <li class="item-ul-footer">{{'TRADE & CONTRACT'|translate}}</li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <ul class="footer-list">
+                    <p class="footer-item-title">{{'OUR SOLUTIONS'|translate}}</p>
+                    <a routerLink="/solution">
+                        <li class="item-ul-footer">{{"OFFICE"|translate}}</li>
+                    </a>
+                    <a routerLink="/solution">
+                        <li class="item-ul-footer">{{'EDUCATION'|translate}}</li>
+                    </a>
+                    <a routerLink="/solution">
+                        <li class="item-ul-footer">{{'HOSPITALITY'|translate}}</li>
+                    </a>
+                    <a routerLink="/solution">
+                        <li class="item-ul-footer">{{'HEALTH'|translate}}</li>
+                    </a>
+                    <a routerLink="/solution">
+                        <li class="item-ul-footer">{{'CONFERENCE'|translate}}</li>
+                    </a>
+                    <a routerLink="/solution">
+                        <li class="item-ul-footer">{{'TERMINAL'|translate}}</li>
+                    </a>
+                    <a routerLink="/solution">
+                        <li class="item-ul-footer">{{'RETAIL'|translate}}</li>
+                    </a>
+
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <ul class="footer-list">
+                    <p class="footer-item-title">
+                        {{'MAISONCIEL'|translate}}
+                    </p>
+                    <li class="item-ul-footer">
+                        <!-- {{'Maison Ciel: Leading the destination in furniture design'|translate}},
+                        {{"manufacturing, shipping and installation directly from Turkey to the whole"|translate}}
+                        {{'world in general and to Africa and MENA region in particular'|translate}}.
+                        {{"Endless selection of unique designed-to-order"|translate}} -->
+                        {{' Basically'|translate}}
+                        ,{{' you can browse our innovative models of school, hotel, cafes, restaurants'|translate}}
+                        ,{{' outdoor, villas, and office furniture. Accessories such as lighting, cushions'|translate}},
+                        {{'curtains and carpets can be provided by order'|translate}}.</li>
+
+                </ul>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+
+
+
+
+                <div class="icon-footer-site  ms-5 mt-5" routerLink="/contact">
+
+                    <img
+                        src="../../assets/icons/facebook-placeholder-for-locate-places-on-maps_icon-icons.com_57151.png">
+                    <h6 class="title-mason-footer mt-3">MAISONCIEL</h6>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- <div class="col-md-7 ">
+                 <div class="article-privcy">
+                    {{'By entering your email in the box above, you agree to receive marketing emails'|translate}}
+                     {{'from us and agree to your data being processed in accordance with our'|translate}} <a routerLink="/privcy"><span>{{'Privacy Policy'|translate}}</span></a>.
+                </div> 
+            </div> -->
+
+
+    </div>
+</footer>

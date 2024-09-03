@@ -1,0 +1,62 @@
+.title-product-selection{
+    margin-top: 40px;
+    position: relative;
+}
+
+.title-product-selection::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #111111;
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+}
+
+.section-product-view{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    padding: 0px 10px;
+    margin-top: 40px;
+}
+
+
+
+.category-material-product{
+display: flex;
+column-gap: 5px;
+justify-content: center;
+}
+
+.card{
+    border: none;
+    position: relative;
+}
+.card::after{
+    content: " ";
+width: 100%;
+height: 1px;
+background-color: #000000;
+position: absolute;
+bottom: 0px;
+left: 0px;
+}
+
+.card-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 5px;
+    justify-content: center;
+}
+.card-img img{
+    width: 100%;
+    height: 300px;
+}
+
+.remove-wast-product img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}

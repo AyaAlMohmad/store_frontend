@@ -1,0 +1,38 @@
+<div class="container">
+     <!-- <h6 class="title-your-career">
+        {{' YOUR CAREER AT MAISONCIEL'|translate}}
+    </h6>  -->
+
+    <div class="row" *ngFor="let care of career">
+        <div>
+            <div class="mt-5 me-5">
+                <h6 class="career-name">
+                    {{care.translations.title}}
+                </h6>
+            </div>
+            <div class="col-md-7 mt-4">
+                <div class="description-name" [innerHTML]="care.translations.carrer">
+                  
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="section-skills">
+        <h6 class="title-your-career">
+           {{' SKILLS'|translate}}
+        </h6>
+        <ul class="list-skills">
+            <li *ngFor="let care of career" > <p [innerHTML]="care.translations.your_tasks"></p></li>
+        </ul>
+    </div>
+
+    <div class="enter-information-button" routerLink="/formcareer">
+        {{'SEND YOUR CV'|translate}}
+    </div>
+</div>
+<div class="foot">
+    <app-footer></app-footer>
+</div>

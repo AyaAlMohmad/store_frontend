@@ -1,0 +1,56 @@
+*{
+    font-family: 'Lato', sans-serif !important ;
+}
+.section-parent{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    gap: 60px;
+   
+
+}
+.left-section-personal-info{
+    width: 50%;
+    position: relative;
+}
+.left-section-personal-info::after{
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    right:0px;
+    background-color: #000000;
+}
+button{
+    width: 20%;
+    height: 40px;
+    border: none;
+    background-color: rgb(164, 39, 39);
+    color: #ffffff;
+    font-weight: 600;
+    align-self: flex-end;
+}
+@media(max-width:767px){
+    .section-parent{
+        display: flex;
+        flex-direction: column;
+    }
+    .left-section-personal-info::after{
+        display: none;
+    }
+    .left-section-personal-info{
+        margin: auto;
+    }
+    button{
+        align-self: center;
+        width: 100px;
+
+    }
+    .title-info{
+        display: flex;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+ }

@@ -1,0 +1,34 @@
+<section class="section-slider-about-project">
+    <div class="container">
+        <igx-carousel animationType="fade" [interval]="time">
+            <igx-slide *ngFor="let slide of slides">
+                
+                <img  src="https://maisonciel.com.tr/{{slide}}" alt="{{slide}}">
+            </igx-slide>
+        </igx-carousel>
+        <div class="row">
+            <!-- <div class="col-md-12">
+                <div class="row mt-5"> -->
+                    <div class="image col-md-2" *ngFor="let slide1 of slides5">
+                        <img src="https://maisonciel.com.tr/{{slide1}}" (click)="showImage(slide1)"
+                            class="thumbnail">
+                    </div>
+                <!-- </div>
+            </div>  -->
+        </div>
+        <!-- <div class="image-project">
+            <div class="img-mobile" *ngFor="let slide1 of slides5">
+                <img src="https://maisonciel.com.tr/{{slide1}}" alt="" (click)="showImage(slide1)">
+                                    </div>
+        </div> -->
+    </div>
+</section>
+<!-- <div class="container1">
+    <section class="section-about-project">
+        <h5 class="title-about-project"> {{'ABOUT PROJECT'|translate}}</h5>
+        <div class="description-project"> <p [innerHTML]="desc"></p></div>
+    </section>
+</div>  -->
+<div>
+    <app-footer></app-footer>
+</div>

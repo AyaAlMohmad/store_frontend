@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="section-title-search">
+        <h5 class="search-word">
+           {{' SEARCH'|translate}}
+        </h5>
+
+        <div class="number-of-result">
+            <div class="number">{{numberProduct}}</div>
+            <div class="search-result">{{'search result for'|translate}}</div>
+            <div class="name-result-product">{{searchName}}</div>
+        </div>
+
+        <div class="input-search">
+            <input type="text" placeholder="{{searchName}}" (keyup)="searchProducts($event)">
+            <img src="../../assets/icons/searchmagnifierinterfacesymbol1_79893.png">
+        </div>
+
+        
+    </div>
+</div>
+<div class="after-liner"></div>
+
+<section class="section-product-view">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let item of searchResult">
+            <div class="card mb-4">
+                <div class="card-img cursor" routerLink="/product-details/{{item.id}}">
+                    <img src="https://maisonciel.com.tr/{{item.image_main}}" alt="nn.png">
+                </div>
+                <div class="card-body11">
+                    <div class="card-title text-center mt-5">
+                        <h5>{{item.translation.name}}</h5>
+                    </div>
+                    <div class="card-text11 mb-4">
+                       <div ><p>{{item.translation.material}}</p></div>
+                       
+                       <div class="desc" ><p [innerHTML]="item.translation.description"></p></div>
+
+                       <!-- {{item.translation.description}} -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section class="see-more-button">
+    <div class="button-more" (click)="seeMoreProducts()">
+      {{'SEE MORE PRODUCTS'|translate}}
+    </div>
+  </section>
+  <div class="foot">
+    <app-footer></app-footer> 
+</div>

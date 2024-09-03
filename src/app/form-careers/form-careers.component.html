@@ -1,0 +1,42 @@
+<div class="form-parent">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+      <div  >
+        <label class="name">
+         {{' Name:'|translate}}
+          <input formControlName="name" placeholder="{{'Your name'|translate}}">
+        </label>
+      </div>
+      <div *ngIf="myForm.controls.name.invalid && myForm.controls.name.touched">
+          <small style="color: red;">{{'Name is required'|translate}}</small>
+        </div>
+  
+      <div>
+        <label class="number">
+          {{'Mobile Number:'|translate}}
+          <input formControlName="mobileNumber" placeholder="{{'Your mobile number'|translate}}">
+        </label>
+      </div>
+      <div *ngIf="myForm.controls.mobileNumber.invalid && myForm.controls.mobileNumber.touched">
+          <small style="color: red;">{{'Mobile number is required'|translate}}</small>
+        </div>
+        <div class="career">
+          <label for="">{{'Enter Careers:'|translate}}</label>
+          <!-- <select class="form-select form-select-lg mb-3" formControlName="career"
+          *ngFor="let car of careers" aria-label="Large select example"
+      >
+          <option value="{{car.id}}" selected >{{car.translations.title}}</option>
+         </select> -->
+         <input formControlName="career" placeholder="{{'Enter Careers:'|translate}}">
+       
+        </div>
+  
+         <div >
+          <label for="">{{'Enter Your CV'|translate}}: ".pdf"</label><br>
+          <input type="file" (change)="onFileChange($event)" accept-language="fr" accept="image/*" title ="{{'Choose file'|translate}}" accept=".pdf" formControlName="file">
+         </div> 
+         
+      <button class="btn btn-dark"  type="submit" [disabled]="myForm.invalid">{{'SEND'|translate}}</button>
+     
+     </form>
+     
+  </div>

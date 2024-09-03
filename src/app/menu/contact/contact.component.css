@@ -1,0 +1,87 @@
+*{
+    font-family: 'Lato', sans-serif !important ;
+}
+.title{
+    font-weight: bold;
+}
+.gmail{
+    margin-top: 100px;
+    position: relative;
+
+}
+.gmail >h4{
+    position: absolute;
+    
+    
+
+}
+.gmail-content{
+    margin-top: 170px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 1px solid rgb(148, 145, 145);
+    padding: 25px;
+}
+.image-gmail{
+    position: relative;
+}
+.image-gmail img{
+    position: absolute;
+    right: 20px;
+    top: 50px;
+}
+img.icon-web {
+    width: 30px;
+    height: 30px;
+    
+}
+.web-contact-icons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@media(max-width:767px){
+    .container-fluid{
+        margin-top: 50px;
+display: flex;
+flex-direction: column;
+    }
+    .col-md-5{
+        margin-top: 15px;
+    }
+    .contact{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .web-contact-icons{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        margin-top: 5px;
+    }
+   
+}
+@media(min-width:768px){
+    .container-fluid{
+        margin-top: 50px;
+display: flex;
+flex-direction: column;
+    }
+    .col-md-5{
+        margin-top: 15px;
+    }
+    .contact{
+        font-size: 22px;
+        font-weight: 800;
+    }
+    .web-contact-icons{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        margin-top: 5px;
+    }
+}

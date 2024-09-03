@@ -1,0 +1,41 @@
+<div class="container">
+    <section class="parent-brand-history">
+        <h4 class="brand-history">{{'Brand History'|translate}}</h4>
+        <h4 class="brand-history">{{history[0].date}}</h4>
+      
+        <div class="description-maison">
+            <span> Maison Ciel </span> <div [innerHTML]="history[0].translations.description"></div>
+           
+        </div> 
+       
+    </section>
+
+    <div class="title-our-mission">
+        <h5 class="title">{{history[1].translations.title}} {{history[1].date}}</h5>
+        <p class="descrip" [innerHTML]="history[1].translations.description"></p>
+    </div>
+
+    <div class="title-our-mission">
+        <h5 class="title">{{history[2].translations.title}} {{history[2].date}}</h5>
+        <p class="descrip" [innerHTML]="history[2].translations.description"></p>
+    </div>
+    <section class="section-view-photo">
+        <div class="row row-photo">
+            <div class="col-md-3" >
+                <img class="w-100" src="https://maisonciel.com.tr/{{images[0]}}" alt="">
+            </div>
+             <div class="col-md-3">
+                <img class="w-100" src="https://maisonciel.com.tr/{{images[1]}}" alt="">
+            </div>
+            <div class="col-md-3">
+                <img class="w-100" src="https://maisonciel.com.tr/{{images[2]}}" alt="">
+            </div>
+            <div class="col-md-3">
+                <img class="w-100" src="https://maisonciel.com.tr/{{images[3]}}" alt="">
+            </div> 
+        </div>
+    </section>
+</div>
+<div class="foot">
+    <app-footer></app-footer>
+</div>

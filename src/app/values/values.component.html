@@ -1,0 +1,40 @@
+
+<div class="container">
+    <section class="section-logo-maison" *ngFor="let item of values">
+        <!-- <div>
+            <img src="../../assets/logoimage/Maison Ciel Logo-07.png">
+        </div> -->
+        <div class="section-image-content">
+            <img src="https://maisonciel.com.tr/{{item.images[0]}}">
+        </div>
+        <div class="section-title-describe-value">
+            <div class="row">
+                <div class="col-md-7 col-sm-12">
+                    <h5 class="title-valu">
+                        {{item.translations.title}}
+                        
+                    </h5>
+                    <div  >
+                      
+                <p [innerHTML]="desc" class="description-value"></p>
+                    </div>
+                    <!-- {{item.translations.description}} -->
+                </div>
+                
+                    <div class="col-md-5">
+                        <div class="image-value">
+                        <img src="https://maisonciel.com.tr/{{item.images[1]}}">
+                    </div>
+                </div>
+            </div>
+            <div class="dicover " >
+                <p routerLink="/catalog"><i class="fa-solid fa-circle-arrow-right"></i> {{'Discover Maison Ciel in our interactive brochure'|translate}}</p>
+            </div>
+        </div>
+
+      
+    </section>
+</div>
+<div class="foot">
+    <app-footer></app-footer>
+</div>

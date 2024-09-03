@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="title text-center mt-5 ">
+        <h4 class="title-page">{{'HOSPITALITY FURNITURE'|translate}}</h4>
+    </div>
+    <div class="pargraph text-center">
+        <p class="w-75" [innerHTML]="products[0].category.description">
+            
+          
+            .
+        </p>
+    </div>
+    <div class="showRoom text-center">
+        <p routerLink="/projects"><i class="fa-solid fa-circle-arrow-right"></i> {{'Find Our Projects'|translate}}</p>
+    </div>
+    <div class="Nproducts">
+        <p>{{numberProd}} {{'Products'|translate}}</p>
+    </div>
+
+    <section class="section-product-view">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" *ngFor="let product of products">
+                    <div class="card mb-4 cursor" routerLink="/products/{{product.id}}">
+                        <div class="card-body">
+                            <div class="card-title text-center mt-6">
+                                <!-- <h6>{{product.category.name}}</h6> -->
+                                <div class="image-subcategory">
+                                    <img  src="https://maisonciel.com.tr/{{product.image}}" alt="image.png">
+                                    <!-- <img src="../../../assets/images/1212.jpg"> -->
+                                </div>
+                            </div>
+                            <div class="card-text mb-4">
+                                <p>{{product.Sub_category.name}}</p>
+                                <!-- <p>{{product.translation.material}}</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div class="foot">
+    <app-footer></app-footer>
+</div>
+<!-- <div class="card-img" routerLink="/product-details/{{product.id}}">
+                            <img src="https://largestorefurniture.000webhostapp.com{{product.images[0]}}" alt="nn.png">
+                        </div> -->

@@ -1,0 +1,60 @@
+<div class="drop-down2">
+        <ul class="dropdwon-menu-cntent-section-one cursor" (click)="reloadPageAndHideMenu()">
+
+                <li class="item-dropdown" routerLink="/office">{{'OFFICE FURNITURE'|translate}}</li>
+
+                <li class="item-dropdown" routerLink="/school">{{'SCHOOL FURNITURE'|translate}}</li>
+
+                <li class="item-dropdown" routerLink="/hospitality">{{'HOSPITALITY FURNITURE'|translate}}</li>
+
+                <li class="item-dropdown" routerLink="/outdoor">{{'OUTDOOR FURNITURE'|translate}}</li>
+
+
+        </ul>
+
+        <ul class="dropdwon-menu-cntent-section-two cursor">
+
+                <li class="item-dropdown" (click)="clickProducts()">{{"PRODUCTS"|translate}} <i
+                                class="fa-solid fa-chevron-right"></i></li>
+        </ul>
+        <ul class="dropdwon-menu-cntent-section-two2 cursor" (click)="reloadPageAndHideMenu()">
+                <li class="item-dropdown" routerLink="/projects">{{'PROJECTS'|translate}}</li>
+                <li class="item-dropdown" routerLink="/villas">{{'VILLAS'|translate}}</li>
+                <li class="item-dropdown" routerLink="/catalog">{{'CATALOGUE'|translate}}</li>
+
+                <li class="item-dropdown" (click)="goOrder()">{{'ORDERS'|translate}}</li>
+
+                <li class="item-dropdown" routerLink="/history">{{"MAISONCIEL"|translate}}</li>
+
+        </ul>
+
+        <ul class="dropdwon-menu-cntent-section-three cursor" (click)="reloadPageAndHideMenu()">
+
+                <li class="item-dropdown" [routerLink]="['/contract']">{{'TRADE & CONTRACT'|translate}}</li>
+
+                <li class="item-dropdown" routerLink="/careers">{{'CAREERS'|translate}}</li>
+
+                <li class="item-dropdown" routerLink="/investors">{{"INVESTORS"|translate}}</li>
+
+                <li class="item-dropdown" routerLink="/contact">{{"CONTACT US"|translate}}</li>
+
+                <li class="item-dropdown" (click)="goAccount()">{{"MY ACCOUNT"|translate}}</li>
+
+        </ul>
+
+        <ul class="dropdwon-menu-cntent-section-four cursor" (click)="reloadPageAndHideMenu()">
+                <li class="item-dropdown" routerLink="/solution">{{'SERVICES'|translate}} </li>
+                <li class="item-dropdown" routerLink="/values">{{'VALUES'|translate}} </li>
+
+                <li class="item-dropdown" routerLink="/about">{{'ABOUT US'|translate}} </li>
+
+                <li class="item-dropdown" routerLink="/privcy">{{'PRIVACY AND POLICY'|translate}}</li>
+
+                <li class="item-dropdown" routerLink="/faqs">{{"FAQ'S"|translate}}</li>
+
+
+
+        </ul>
+
+
+</div>

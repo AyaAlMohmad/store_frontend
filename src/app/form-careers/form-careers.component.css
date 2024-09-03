@@ -1,0 +1,47 @@
+.form-parent{
+    margin-top: 100px;
+}
+form{
+   
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+ 
+}
+label{
+    font-weight: 700;
+}
+input{
+    padding: 5px;
+    border-radius: 5px;
+    border-color: rgb(204, 197, 197);
+    
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.number{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+.career{
+    display: flex;
+    flex-direction: column;
+}
+button{
+    width: 50%;
+    margin: auto;
+   padding: 10px;
+    margin-top: 25px;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: #ffffff;
+}

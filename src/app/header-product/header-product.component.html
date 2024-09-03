@@ -1,0 +1,93 @@
+<section class="parent-menu-product">
+    <div class="container-fluid">
+        <div class="close">
+            <button type="button" class="btn-close" aria-label="Close" (click)="close()"></button>
+
+        </div>
+        <!-- <div class="row" *ngIf="menuProductIsOpen">
+            menuProductIsOpen=false" *ngIf="menuProductIsOpen
+            <div class="menu menu1 col-md-3" *ngFor="let item of Category"> 
+                <h5>{{item.translations.name}}</h5>
+                <ul class="items-list" *ngFor="let ite of SubCategory">
+                    
+                        <li class="item-list-product-project" (click)="loadProduct(ite.id)" >{{ite.translations.name}}</li>
+                       
+                 
+                </ul>
+
+            </div>
+          
+        </div> -->
+        <div class="row" *ngIf="menuProductIsOpen">
+            <!-- <div class="menu menu1 col-md-3" *ngFor="let item of SubCategory">
+                <h5>{{item.Category.name}}</h5>
+                <ul class="items-list" *ngFor="let ite of item.sub_category">
+                    
+                    <li class="item-list-product-project" (click)="loadProduct(ite.id)" >{{ite.sub_category.name}}</li>
+                   
+             
+            </ul>
+
+            </div> -->
+            <div class="col-md-2  menu1">
+                <h6 style="font-family:'Lato', sans-serif !important;">{{SubCategory[0].Category.name}}</h6>
+
+                <div class="items-list1" *ngFor="let item of menu11">
+                    <p class="item-list-product-project" (click)="loadProduct(item.id)">{{item.sub_category.name}}</p>
+                </div>
+
+            </div>
+            <div class="col-md-2  menu2">
+                <h5></h5>
+
+                <div class="items-list1" *ngFor="let item of menu12">
+                    <p class="item-list-product-project" (click)="loadProduct(item.id)">{{item.sub_category.name}}</p>
+                </div>
+
+            </div>
+
+            <div class="col-md-2 menu3">
+                <h5></h5>
+               
+                <h6 style="font-family:'Lato', sans-serif !important;">{{SubCategory[1].Category.name}}</h6>
+                <div class="items-list1" *ngFor="let item of menu21">
+                    <p class="item-list-product-project" (click)="loadProduct(item.id)">{{item.sub_category.name}}</p>
+                </div>
+
+            </div>
+            <div class="col-md-2 menu4">
+                <h5></h5>
+                <div class="items-list1" *ngFor="let item of menu22">
+                    <p class="item-list-product-project" (click)="loadProduct(item.id)">{{item.sub_category.name}}</p>
+                </div>
+                <h6 style="font-family:'Lato', sans-serif !important;">{{SubCategory[2].Category.name}}</h6>
+                <div class="items-list1" *ngFor="let item of menu31">
+                    <p class="item-list-product-project" (click)="loadProduct(item.id)">{{item.sub_category.name}}</p>
+                </div>
+            </div>
+            <div class="col-md-2 menu4">
+                <h5></h5>
+                <div class="items-list1" *ngFor="let item of menu32">
+                    <p class="item-list-product-project" (click)="loadProduct(item.id)">{{item.sub_category.name}}</p>
+                </div>
+               
+
+
+            </div>
+            <div class="col-md-2 menu5">
+                <h6 style="font-family:'Lato', sans-serif !important;">{{SubCategory[3].Category.name}}</h6>
+                <div class="items-list1" *ngFor="let item of menu4">
+                    <p class="item-list-product-project" (click)="loadProduct(item.id)">{{item.sub_category.name}}</p>
+                </div>
+                <h6 style="font-family:'Lato', sans-serif !important;">{{SubCategory[4].Category.name}}</h6>
+                <div class="items-list1" *ngFor="let item of menu5">
+                    <p class="item-list-product-project" (click)="loadProduct(item.id)">{{item.sub_category.name}}</p>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</section>

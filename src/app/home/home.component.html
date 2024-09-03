@@ -1,0 +1,105 @@
+<div class="laptop" >
+    <section  *ngFor="let vedio of vedios;let i = index;let first= first">
+        <div class="animation-section-home">
+           <!-- <div class="image-over-video" *ngIf="first">
+               <img src="../../assets/logoimage/Maison Ciel Logo-06.png">
+               
+           </div> -->
+           <!-- <div class="title-on-video" *ngIf="first">{{'MAISON CIEL OFFERS UNIQUE'|translate}}</div> -->
+           
+           <div class="vedio">
+               <video src="https://maisonciel.com.tr/{{vedio}}" autoplay></video>
+       
+           </div>
+       
+        </div>
+        <div class="Image-section-home">
+           <div class="image">
+               <img src="https://maisonciel.com.tr/{{Img[i]}}" alt="notFound">
+       
+           </div>
+        </div> 
+       
+       </section> 
+</div>
+
+   <div class="mobile" *ngIf="showhome">
+    <div class="ved-img" *ngFor="let vedio of vedios;let i = index;">
+        <div class="vedio-mob">
+            <video src="https://maisonciel.com.tr/{{vedio}}" autoplay></video>
+    
+        </div>
+        <div class="image-mob">
+            <img src="https://maisonciel.com.tr/{{Img[i]}}" alt="notFound">
+    
+        </div>
+    </div>
+    
+    
+
+   </div>
+   <div class="foot">
+    <app-footer></app-footer>
+</div>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   <!-- <section class="animation-section-home">
+   
+   </section> -->
+   <!-- <div *ngFor="let vedio of vedios;let i=index"> -->
+   
+       <!-- <section class="design-animation-section-home" *ngFor="let item of vedios">
+           <video [src]="item" controls></video>
+           <div class="explain-about-image2">
+               <h2>Name collection</h2>
+               <p class="designer-by">Designer by someone</p>
+               <div class="parent-more-link">
+                   <p>></p>
+                   <p class="link-more" routerLink="/product-details">more</p>
+               </div>
+           </div>
+       </section> -->
+       <!-- <section class="design-image-home">
+           <img [src]="">
+           <div class="explain-about-image">
+               <h2>Name collection</h2>
+               <p class="designer-by">Designer by someone</p>
+               <div class="parent-more-link">
+                   <p>></p>
+                   <p class="link-more" routerLink="/product-details">more</p>
+               </div>
+           </div>
+       </section> -->
+       <!-- <section class="design-animation-section-home">
+   <img src="../../assets/images/photo_2023-12-20_23-46-19.jpg">
+   <div class="explain-about-image2">
+       <h2>Name collection</h2>
+       <p class="designer-by">Designer by someone</p>
+       <div class="parent-more-link">
+       <p>></p>
+       <p class="link-more" routerLink="/product-details">more</p>
+       </div>
+   </div>
+   </section> -->
+   <!-- </div> -->
+   
+   
+   <!-- section catalog  -->
+   <!-- <section class="catalog-section"></section> -->

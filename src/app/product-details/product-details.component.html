@@ -1,0 +1,139 @@
+<div class="allsec">
+    <section class="section-slider-product-parent">
+        <div class="left-slider">
+            <div class="container">
+                <igx-carousel animationType="fade" [interval]="time">
+                    <igx-slide *ngFor="let slide of slides">
+
+                        <img #imag class="img-prod" src="https://maisonciel.com.tr/{{slide}}" alt="{{slide}}" >
+                    </igx-slide>
+                </igx-carousel>
+
+
+
+                <div class="row image-products">
+                    <div class="image col-md-2"><img #img1 src="https://maisonciel.com.tr/{{mainImage[0]}}" alt=""
+                            (click)="openModal(img1.src)"></div>
+                    <div class="image col-md-2" *ngFor="let slide1 of slides5">
+
+                        <img #img src="https://maisonciel.com.tr/{{slide1}}" (click)="openModal(img.src)"
+                            class="thumbnail">
+                    </div>
+                </div>
+                <!-- الصور تحت السلايدر في الموبايل خفيناها -->
+                <!-- <div class="image-products-mobile">
+                    <div class="img-mobile">
+                        <img #immmmg src="https://maisonciel.com.tr/{{mainImage[0]}}" alt=""
+                            (click)="showImage(immmmg.src)">
+
+                    </div>
+
+
+                    <div class="img-mobile" *ngFor="let slide1 of slides5">
+                        <img src="https://maisonciel.com.tr/{{slide1}}" alt="" (click)="showImage(slide1)">
+                    </div>
+                </div> -->
+
+
+            </div>
+        </div>
+        <div class="right-product">
+            <h4 class="name-category">{{productDetails[0].category.name}}</h4>
+            <h5 class="product-name">{{productDetails[0].translation.name}}</h5>
+            <div class="short-descrb">
+                <p [innerHTML]="productDetails[0].translation.description"></p>
+            </div>
+
+            <div class="title-color">{{'Color'|translate}} :</div>
+            <div class="color-of-product">
+
+                <mat-chip-listbox>
+                    <mat-chip class="circle" *ngFor="let color of colors" class="color-chip"
+                        [style.background]="color"></mat-chip>
+                </mat-chip-listbox>
+            </div>
+            <div class="button-add" (click)="AddProduct()">
+                {{'ADD TO CART'|translate}}
+            </div>
+            <div class="social-media">
+                <a href="{{item.link}}" target="_blank" *ngFor="let item of social">
+                    <div class="image-social">
+                        <img src="https://maisonciel.com.tr/{{item.images}}">
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <!-- <div class="slider-about-product">
+        <igx-carousel animationType="fade" [interval]="time">
+            <igx-slide *ngFor = "let slide of slides6 ;let i=index" (click)="routeTo(i)">
+                <img src="https://maisonciel.com.tr/{{slide}}" alt="..">
+            </igx-slide>
+        </igx-carousel> 
+    </div> -->
+    <!-- <div class="container1 ">
+         <section class="sction-detaile-product">
+            <h6 class="title-product-detail">
+                {{'PRODUCT DETAIL'|translate}}
+            </h6>
+            <div class="icon-plus" (click)="isClose=true" *ngIf="!isClose">
+                <img src="../../assets/icons/Plus_icon-icons.com_71848.png" alt="">
+            </div>
+            <div class="image-close" *ngIf="isClose" (click)="isClose=false">
+                <img src="../../assets/icons/checkmark_icon-icons.com_58606.png" alt="nnn">
+            </div>
+
+        </section> -->
+
+    <!-- <div class="long-discrep-product" *ngIf="isClose">
+            <p [innerHTML]="productDetails[0].translation.description"></p>
+           
+        </div> 
+       
+    </div> -->
+</div>
+<div class="modal " id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <!-- <h4 class="modal-title">Modal Heading</h4> -->
+                <button type="button" class="btn-close" (click)="closeModal()" data-bs-dismiss="modal">
+
+                </button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="zooming">
+                    <img class="catzoomin" id="imgmodalid" src="{{zoomimg}}" alt="">
+                </div>
+
+                <br>
+                <!-- <img src="../../assets/icons/zoomin_zoom_search_find_1531 (1).png" class="zoom" (click)="zoominn()"
+                    alt="">
+                <img src="../../assets/icons/zoomout_zoom_search_find_1530.png" class="zoom" (click)="zoomoutt()"
+                    alt="">  -->
+
+                <!-- <button class="btn" id="zoomin" >{{'zoom in'|translate}}</button>
+         <button class="btn" id="zoomout" >{{'zoom out'|translate}}</button> -->
+
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" (click)="closeModal()"
+                    data-bs-dismiss="modal">{{'Close'|translate}}</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="foot">
+    <app-footer></app-footer>
+</div>
+
+
+<!-- productDetails[0].id -->

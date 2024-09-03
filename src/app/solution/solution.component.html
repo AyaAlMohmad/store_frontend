@@ -1,0 +1,23 @@
+<div class="container">
+  
+    <div class="parent-service" *ngFor="let item1 of ourServices">
+        <h4 class="title-design-service" >{{item1.translations.title}}</h4>
+    
+    <p class="descr" [innerHTML]="item1.translations.description"></p>
+
+<div class="row">
+    <div class="col-md-3" *ngFor="let img of images">
+        <img src="https://maisonciel.com.tr/{{img}}" alt="">
+    </div>
+</div>
+
+    </div>
+    <h4 class="title-design-oursolution">{{'Our Solutions'|translate}}</h4>
+    <section class="parent-title-desc" *ngFor="let item of ourSolution">
+        <h5 class="title">{{item.translations.title}}</h5>
+        <div class="descr" [innerHTML]="item.translations.description"></div>
+    </section>
+</div>
+<div class="foot">
+    <app-footer></app-footer>
+</div>

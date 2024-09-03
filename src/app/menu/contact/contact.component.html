@@ -1,0 +1,59 @@
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col-md-12 text-center">
+            <h4 class="title">{{'Contact Us'|translate}}</h4>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-5">
+            <div class="pargraph m-5 w-75">
+                <h4>{{'Contact Us'|translate}}</h4>
+                <p>{{'Please contact us if you have any further inquires'|translate}}.
+                    <!-- {{'Please complete this form and we will get back to you as soon as possible'|translate}}.
+                    {{'Unless otherwise indicated, all fields are required'|translate}}. -->
+                </p>
+            </div>
+
+         
+
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-5">
+            <div class="gmail m-5">
+                <h4 class="contact">{{'You can contact us'|translate}}</h4>
+            </div>
+            <div class="gmail-content row">
+                <div >
+                    <div class="web-contact-icons">
+                        <img class="icon-web"
+                            src="../../../assets/icons/mail_email_message_electronic_online_web_icon-icons.com_59986.png"
+                            alt="">
+                        <p> <a href="{{contact[0].email}}" target="_blank"
+                            style="color: black;">{{contact[0].email}}</a></p>
+                    </div>
+                    <div class="web-contact-icons">
+                    <img class="icon-web" src="../../../assets/icons/emblemweb_93503.png" alt="">
+                    <p> <a href="{{contact[0].website}}" target="_blank"></a>{{contact[0].website}}</p>
+                </div>
+                <div class="web-contact-icons">
+                    <img class="icon-web" src="../../../assets/icons/phone-handset_icon-icons.com_48252.png" alt="">
+                    <h6>{{contact[0].phone}}</h6>
+                </div>
+                <p>{{contact[0].location}}</p>
+            </div>
+ 
+
+
+
+        </div>
+
+    </div>
+</div>
+</div>
+<div class="foot">
+    <app-footer></app-footer>
+</div>

@@ -1,0 +1,18 @@
+<div class="container">
+  
+    <igx-carousel animationType="fade" [interval]="time" >
+      <igx-slide *ngFor="let slide of slides" >
+        <img [src]="slide.src" alt="{{slide.src}}" >
+      </igx-slide>
+    </igx-carousel>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row mt-5">
+          <div class="image col-md-2" *ngFor="let slide1 of slides5">
+            <img [src]=" slide1.src" (click)="showImage(slide1)" class="thumbnail">
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+</div>

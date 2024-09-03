@@ -1,0 +1,21 @@
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    font-weight: 900;
+  }
+  .image-maison{
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+  }
+  .section-title-desc{
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+  }
+  .title-arti{
+      font-weight: 800;
+  }

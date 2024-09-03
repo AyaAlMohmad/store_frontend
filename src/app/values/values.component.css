@@ -1,0 +1,105 @@
+
+.container{
+    font-family: 'Lato', sans-serif!important;
+  
+  }
+  .path-home{
+      width: 100%;
+      height: 40px;
+      padding-left: 25px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      
+  }
+  
+  .section-logo-maison{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 60%;
+      margin: auto;
+      margin-top: 45px;
+  }
+  .title-valu{
+font-weight: 600;
+  }
+  .section-image-content{
+      margin-top: 30px;
+  }
+  .section-title-describe-value{
+      margin-top: 25px;
+  }
+  .description-value{
+      margin-top: 10px;
+  }
+  .image-value{
+      margin-top: 35px;
+  }
+  .dicover{
+      width: max-content;
+      cursor: pointer;
+     
+      position: relative;
+      
+  }
+  
+  .dicover::after{
+      content: "";
+      width: 0px;
+      height: 1px;
+      background-color: #000000;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+  }
+  .dicover:hover::after{
+      
+      width: 100%;
+  }
+  @media(max-width:768px){
+      .container{
+        width: 100%;
+        max-width: 100%;
+        margin: auto;
+          display: flex;
+          flex-direction: column;
+      }
+      img{
+        width: 100%;
+        max-width: 100%;
+        
+        margin: auto;
+
+
+      }
+      .image-value, .section-image-content{
+        max-width: 100%;
+        margin: auto;
+      }
+      .image-value img, .section-image-content img{
+        max-width: 100%;
+        margin: auto;
+      }
+      .description-value{
+       
+        max-width: 100%;
+        padding: 10px;
+        margin: auto;
+       
+       
+      }
+      .title-valu{
+        margin-left: 10px;
+        font-weight: 900;
+      }
+      /* .dicover p{
+        margin: 10px;
+        padding: 10px;
+      } */
+      .foot{
+        max-width: 100%;
+      }
+  }
+  

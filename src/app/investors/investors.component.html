@@ -1,0 +1,23 @@
+<div class="container">
+
+    <!-- <div class="image-maison">
+        <img src="../../assets/logoimage/Maison Ciel Logo-07.png">
+    </div> -->
+    <h5 class="title">
+
+        {{investors[0].translations.title}} {{investors[0].date}}
+    </h5>
+    <div>
+        <div class="section-title-desc" [innerHTML]="investors[0].translations.short_description"></div>
+        <div class="section-title-desc" [innerHTML]="investors[0].translations.description">
+           
+            <!-- <p class="descri">
+        {{policyData[0].translations.description}}
+    </p> -->
+        </div>
+    </div>
+    
+</div>
+<div class="foot">
+    <app-footer></app-footer>
+</div>

@@ -1,0 +1,73 @@
+<!-- <h2 class="text-center">Catalog</h2> -->
+<input type="checkbox" id="checkbox-cover">
+<div class="book">
+
+  <div class="cover">
+    <label class="main-page" for="checkbox-cover">
+      <!-- <h3 class="catalogtitle mb-3">CATALOGUE</h3> -->
+      <!-- <img class="image-maison" src="../../../assets/logoimage/Maison Ciel Logo-07.png"> -->
+      <!-- <img src="../../assets/images/1299.jpeg"> -->
+    </label>
+  </div>
+
+
+
+
+  <igx-carousel animationType="fade">
+
+    <igx-slide *ngFor="let product of products;let i=index">
+
+      <div class="sild">
+        <img src="https://maisonciel.com.tr/{{product.image_main}}" alt="">
+        <!-- <igx-carousel [navigation]="false" [pause]="false" [interval]="2000" >
+          <igx-slide *ngFor="let prod of products[i].images">
+            <img src="https://maisonciel.com.tr/{{prod}}" alt="">
+          </igx-slide>
+
+        </igx-carousel> -->
+      </div>
+
+
+      <div class="info">
+        <div class="info-product-text">
+          <div class="name-broduct">{{product.translation.name}}</div>
+          <div class="descrip-product" [innerHTML]="product.translation.description">
+
+          </div>
+        </div>
+        <div class="parent-name-category">
+          <div class="name-category">{{product.category.name}}</div>
+          <div class="name-subcategory">{{product.sub_category.name}}</div>
+        </div>
+
+
+
+      </div>
+
+
+
+    </igx-slide>
+
+
+
+  </igx-carousel>
+
+
+
+</div>
+<hr class="mt-5">
+<div class="container">
+  <div class="catalog" *ngFor="let cat of catalog">
+    <div class="catalog-title ms-5">
+      <h6>{{cat.translation.title}}</h6>
+    </div>
+    <div class="catalog-pdf">
+      <a href="https://maisonciel.com.tr/{{cat.pdf}}" target="_blank">
+        <img class="imag-pdf ms-1" src="../../../assets/icons/file_pdf_download_icon-icons.com_68954.png">
+      </a>
+    </div>
+  </div>
+</div>
+<div class="foot">
+  <app-footer></app-footer>
+</div>

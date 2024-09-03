@@ -1,0 +1,42 @@
+
+<section class="section-slider-view-project">
+    <igx-carousel animationType="fade" [interval]="5000">
+
+        <igx-slide *ngFor="let slide of slides">
+            <img src="https://maisonciel.com.tr/{{slide}}" alt="ff">
+        </igx-slide>
+
+    </igx-carousel>
+</section>
+
+<section class="section-image-title-project">
+    <div class="container">
+        <div class="row" *ngFor="let villa of villas">
+            <div class="col-md-5 mt-3">
+                <!-- <div class="card-image" routerLink="/villa-details/{{villa.id}}"> -->
+                    <div class="card-image" routerLink="/villa-details/{{villa.id}}">
+                    <img src="https://maisonciel.com.tr/{{villa.image}}" alt="">
+                </div>
+            </div> 
+
+            <div class="col-md-7  mt-3">
+                <h6 class="name-project" routerLink="/villa-details/{{villa.id}}">{{villa.translations.title}}
+                </h6>
+                <!-- <h5 class="name-project" >{{villa.translations.title}}
+                </h5> -->
+                <p class="detail-project" [innerHTML]="villa.translations.description"></p>
+                <a href="https://maisonciel.com.tr/{{villa.pdf}}" target="_blank" style="color: red;">
+                    <img class="imag-pdf ms-1" src="../../../assets/icons/file_pdf_download_icon-icons.com_68954.png"></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <section class="back-to-top">
+    <p class="text-back-top" (click)=" scrollToTop()">
+        {{'Back to top'|translate}}
+    </p>
+</section> -->
+<div class="foot">
+    <app-footer></app-footer>
+</div>

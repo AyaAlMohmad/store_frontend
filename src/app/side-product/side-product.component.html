@@ -1,0 +1,162 @@
+<div class="product-menu" >
+    <div class="back" (click)="changeValue1()" >
+        <!-- <button type="button" class="back"><i class="fa-solid fa-chevron-left"
+           ></i>{{'Back'|translate}}</button> -->
+           <div  class="back"><img src="../../assets/icons/arrow_back_left_icon_123724.png"
+            class="fa-solid fa-chevron-left"></div>
+    </div>
+
+    <div class="menu menu1">
+
+        <ul class="items-list" *ngFor="let item of SubCategory">
+
+            <li class="item-list-title mt-3">
+                <h6>{{item.Category.name}}</h6>
+            </li>
+
+            <li class="item-list-product-project" 
+             
+            *ngFor="let ite of item.sub_category"><a (click)="loadProducts(ite.id)" >{{ite.sub_category.name}}</a></li>
+
+
+            <!-- <li class="item-list-product-project">ARMCHAIRS</li> 
+routerLink="/products/{{it.id}}"
+
+            <li class="item-list-product-project">COFFEE TABLES</li>
+
+            <li class="item-list-product-project">TV STANDS</li>
+
+            <li class="item-list-product-project">BOOKCASES, WALL COMPOSITIONS
+            </li>
+
+
+            <li class="item-list-product-project">CONSOLES, SIDE FURNITURE</li> -->
+
+        </ul>
+
+    </div>
+    <!-- <div class="menu menu2">
+        <ul class="items-list">
+            <li class="item-list-title">
+                <h6>DINING ROOM</h6>
+            </li>
+
+            <li class="item-list-product-project">CHAIRS, STOOLS, BENCHES</li>
+
+            <li class="item-list-product-project">DINING TABLES</li>
+
+            <li class="item-list-product-project">SIDEBOARDS, COLUMNS, DRESSERS</li>
+
+
+        </ul>
+        <ul class="items-list">
+            <li class="item-list-title">
+                <h6>OFFICES</h6>
+            </li>
+
+            <li class="item-list-product-project">OFFICE FURNITURE</li>
+
+            <li class="item-list-product-project">OFFICE CHAIRS</li>
+
+        </ul>
+    </div>
+    <div class="menu menu3">
+
+        <ul class="items-list">
+            <li class="item-list-title">
+                <h6>ROOM</h6>
+            </li>
+
+            <li class="item-list-product-project">BEDS</li>
+
+            <li class="item-list-product-project">CABINETS</li>
+
+            <li class="item-list-product-project">CHESTS OF DRAWERS, BEDSIDE TABLES, ACCESSORIES</li>
+
+
+        </ul>
+        <ul class="items-list">
+            <li class="item-list-title">
+                <h6>OUTDOOR / OUTDOOR FURNITURE</h6>
+            </li>
+
+            <li class="item-list-product-project">OUTDOOR SOFAS AND ARMCHAIRS</li>
+
+            <li class="item-list-product-project">OUTDOOR FURNITURE</li>
+
+            <li class="item-list-product-project">OUTDOOR DECORATION</li>
+
+
+        </ul>
+
+    </div>
+    <div class="menu menu4">
+
+        <ul class="items-list">
+            <li class="item-list-title">
+                <h6>DECORATION</h6>
+            </li>
+
+            <li class="item-list-product-project">LIGHT FIXTURES</li>
+
+            <li class="item-list-product-project">CUSHIONS & TEXTILES</li>
+
+            <li class="item-list-product-project">CARPET
+            </li>
+
+
+            <li class="item-list-product-project">DECORATIVE OBJECTS</li>
+
+            <li class="item-list-product-project">MIRRORS</li>
+
+        </ul>
+    </div>
+    <div class="menu menu5">
+        <div class="first">
+
+
+
+            <ul class=" items-list">
+                <li class="item-list-title">
+                    <h6>INSPIRATION</h6>
+                </li>
+
+                <li class="item-list-product-project">AUTUMN-WINTER CREATIONS</li>
+
+                <li class="item-list-product-project">BOMBOM BY JOANA VASCONCELOS </li>
+
+                <li class="item-list-product-project">THE BUBBLE SOFA</li>
+
+                <li class="item-list-product-project">THE MAH JONG SOFA</li>
+
+                <li class="item-list-product-project">THE ONLINE SALE SELECTION</li>
+
+                <li class="item-list-product-project">THE DECORATION BOUTIQUE</li>
+
+            </ul>
+        </div>
+
+    </div>
+</div> -->
+
+
+<!-- menue product type dropdown for item products -->
+<!-- <div class="menue-products-type">
+            <ul>
+                <a href="#">
+                    <li class="item-list-product-project" >OFFICE FURNITURE</li>
+                </a>
+                <a href="#">
+                    <li class="item-list-product-project">SOFA</li>
+                </a>
+                <a href="#">
+                    <li class="item-list-product-project">ARMCHAIR</li>
+                </a>
+                <a href="#">
+                    <li class="item-list-product-project">DESKS</li>
+                </a>
+            </ul>
+            <ul></ul>
+            <ul></ul>
+            <ul></ul>
+        </div> -->

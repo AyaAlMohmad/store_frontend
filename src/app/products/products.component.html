@@ -1,0 +1,103 @@
+<section class="section-name-desc-product">
+    <h5 style="font-weight:bold;">{{products[0].sub_category.name}}</h5>
+    <!-- <P class="description-product" [innerHTML]="products[0].translation.description"></P> -->
+</section>
+
+<section class="number-of-products">{{numberProducts}} {{'products'|translate}}</section>
+
+<section class="filter-menus">
+    <ul class="list-filter1">
+        <li class="icon-filter-item-img">
+            <img src="../../assets/icons/filter_filters_funnel_list_navigation_sort_sorting_icon_123212.png" alt="img">
+        </li>
+        <li>{{'FILTER'|translate}}</li>
+    </ul>
+    <ul class="list-filter">
+        <!-- <li>CATEGORY</li>
+        <li class="icon-filter-item">
+            <img src="../../assets/icons/ic-dropdown-cyan_97624.png" alt="img">
+        </li> -->
+        <select class="form-select  mb-3" aria-label="Large select example"
+            (change)="filterBYcategory($event)">
+            <option value="" selected>{{'CATEGORY'|translate}}</option>
+            <option value="Chairs">{{'Chairs'|translate}}</option>
+            <option value="Sofa">{{'Sofa'|translate}}</option>
+            <option value="Desk">{{'Desk'|translate}}</option>
+            <option value="Cabinets">{{'Cabinets'|translate}}</option>
+            <option value="Tables">{{'Tables'|translate}}</option>
+            <option value="Boards">{{"Boards"|translate}}</option>
+            <option value="Workstations">{{'Workstations'|translate}}</option>
+            <option value="Shelf">{{'Shelf'|translate}}</option>
+            <option value="Cushions">{{'Cushions'|translate}}</option>
+            <option value="Sunbeds">{{'Sunbeds'|translate}}</option>
+            <option value="Samples">{{'Samples'|translate}}</option>
+            
+
+
+
+
+        </select>
+    </ul>
+    <ul class="list-filter-latest">
+        <!-- <li>MATERIAL</li>form-select-lg
+        <li class="icon-filter-item">form-select-lg 
+            <img src="../../assets/icons/ic-dropdown-cyan_97624.png" alt="img">
+        </li> -->
+        <select class="form-select mb-3" aria-label="Large select example"
+            (change)="filterMaterial($event)">
+            <option value="material" selected>{{'MATERIAL'|translate}}</option>
+            <option value="fabric">{{'Fabric'|translate}}</option>
+            <option value="leather">{{'leather'|translate}}</option>
+            <option value="Wood">{{'wood'|translate}}</option>
+            <option value="Leather & fabric">{{'leather & fabric'|translate}}</option>
+
+        </select>
+
+
+    </ul>
+
+</section>
+
+<section class="section-product-view mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-4" *ngFor="let product of products">
+                <div class="card mb-4">
+                    
+                    <div class="card-img" routerLink="/product-details/{{product.id}}">
+                        <img  src="https://maisonciel.com.tr/{{product.image_main}}" alt="nn.png">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title text-center mt-2">
+                            <h6 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" *ngIf="product.translation">{{product.translation.name}}</h6>
+                        </div>
+                        <!-- <div class="card-text mb-2">
+                            <div *ngIf="product.sub_category">
+                                <p>{{product.sub_category.name}}</p> 
+                                <p>{{product.category.name}}</p>
+                            </div>
+                            <div *ngIf="product.translation">
+                                <p>{{product.translation.material}}</p>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="see-more-button">
+    <div class="button-more" (click)=" seeMoreProducts()">
+        {{'SEE MORE PRODUCTS'|translate}}
+    </div>
+</section>
+
+<section class="back-to-top">
+    <p class="text-back-top" id="scrollToTopButton" (click)="scrollToTop()">
+        {{'Back to top'|translate}}
+    </p>
+</section>
+<div class="foot">
+    <app-footer></app-footer>
+</div>
